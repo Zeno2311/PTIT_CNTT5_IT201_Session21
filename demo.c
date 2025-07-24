@@ -50,11 +50,11 @@ Node *addAdjacency(int U, int V) {
     // Tạo 1 node mới, thêm vào đầu
     Node* newNode = createNode(U);
     // Đi liên kết với phần tử ban đầu
-    newNode->next = adjacency[U];
-    adjacency[U] = newNode; // newNode lúc này sẽ là phần tử đầu
+    newNode->next = adjacency[V];
+    adjacency[V] = newNode; // newNode lúc này sẽ là phần tử đầu
     newNode = createNode(V);
-    newNode->next = adjacency[V]; // Liên kết với phần tử ban đầu
-    adjacency[V] = newNode;
+    newNode->next = adjacency[U]; // Liên kết với phần tử ban đầu
+    adjacency[U] = newNode;
 }
 
 // Hàm hiển thị liên kết các điểm
